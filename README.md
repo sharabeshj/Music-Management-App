@@ -4,8 +4,9 @@ A platform to upload, stream and share music files at large scale.
 
 ## TODO
 
-    - [ ] Flask app config
-    - [ ] Sqlalchemy and migrations
+    - [x] Flask app config
+    - [ ] Flask CRUD & REST APIs
+    - [x] Sqlalchemy and migrations
     - [ ] Flask upload APIs
     - [ ] s3 client and upload
     - [ ] Frontend streaming and download
