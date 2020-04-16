@@ -7,8 +7,8 @@ class Config(object):
     SECRET_KEY="This is secret"
     SQLALCHEMY_DATABASE_URI=os.environ['DATABASE_URL']
     # Uploads
-    UPLOADS_DEFAULT_DEST = basedir + '/static/songs/'
-    UPLOADS_DEFAULT_URL = '{}/static/songs/'.format(os.environ['HOST_NAME'])
+    UPLOADS_DEFAULT_DEST = basedir + '/app/static/'
+    UPLOADS_DEFAULT_URL = '{}/static/'.format(os.environ['HOST_NAME'])
     
-    UPLOADED_AUDIO_DEST = basedir + '/project/static/songs/'
-    UPLOADED_AUDIO_URL = '{}/static/songs/'.format(os.environ['HOST_NAME'])
+    UPLOADED_AUDIO_DEST = basedir + '/project/static/'
+    UPLOADED_AUDIO_URL = '{}/static/'.format(os.environ['HOST_NAME'])
