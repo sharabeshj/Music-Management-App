@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>List Songs</title>
+{% endblock %}
+
+{% block body %}
+    <div class="content-section">
+        <div class="wrapper2">
+            <div class="header">
+                <h2>MMS-Music Managent System</h2>
+            </div>
+        </div>
+        <a href="/create"><button class="btn btn-default add-button">Add Music</button></a>
+	<table class="table table-bordered table-striped table-hover table-style">
+		<thead>
+			<tr class=" row flex-nowrap">
+				<th class=" col-md-1 center-align">#</th>
+				<th class=" col-md-2 center-align">Title</th>
+				<th class=" col-md-2 center-align">Album</th>
+				<th class= " col-md-3 center-align">Artist</th> 
+				<th class=" col-md-4 center-align">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for song in music %}
+				<tr class=" row flex-nowrap">
+					<td class=" col-md-1 center-align">{{ song.id }}</td>
+					<td class=" col-md-3 center-align">{{ song.title }}</td>
+					<td class=" col-md-3 center-align">{{ song.album }}</td>
+					<td class= " col-md-3 center-align">{{ song.artist }}</td>
+					<td class= " col-md-2 center-align">
+						<a href="/music/{{ song.id }}">play</a>
+						|
+						<a href="/delete/{{ song.id }}">delete</a>
+					</td>
+				</tr>
+            {% endfor %}
+		</tbody> 
+	</table>    
+        <table>
+            <tr>
+
+            </tr>
+        </table>
+    </div>
+{% endblock %}

@@ -41,8 +41,9 @@ class Music(db.Model):
     title = db.Column(db.String(60))
     album = db.Column(db.String(60))
     artist = db.Column(db.String(60))
-    upload_type = db.Column(db.String(60),default = "local")
     url = db.Column(db.String(60))
+    s3_upload = db.Column(db.Boolean,default=False)
+    s3_url = db.Column(db.String(60))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
 
     def __init__(self, title, album, artist,url):

@@ -50,7 +50,7 @@ p.copyright {
 }
 
 .content-section {
-    padding: 50px 0;
+    padding: 50px 20px;
     border-top: 1px solid #e7e7e7;
 }
 
@@ -105,4 +105,34 @@ p.copyright {
   height: auto !important;
   height: 100%;
   margin: 0 auto -4em;
+}
+
+#wrapper2 {
+    width: 100%;
+display: flex;
+justify-content: center;
+margin-top: 72px;
+margin-bottom: 36px;	
+}
+.header {
+    text-align: center;
+    width: 70%; 
+    background: #aec251; 
+    margin-top: 0px; 
+    margin: auto;
+    padding:15px 0px 15px 0px;}
+.header h2 {width: 100%; margin:auto; color: #FFFFFF;}
+
+.center-align {
+	text-align: center;
+}
+
+.add-button {
+    margin-left: 28px;
+}
+
+.table-style {
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
 }

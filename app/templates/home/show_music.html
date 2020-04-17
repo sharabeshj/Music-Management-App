@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="content-section">
+    <div class="wrapper2">
+        <div class="header">
+            <h2>MMS-Music Managent System</h2>
+        </div>
+    </div>
+    <h1>{{song.title}}</h1>
+    <hr>
+    <b>{{ song.artist }}</b> | <b>{{ song.album }}</b>
+
+    {% if song.s3_upload %}
+        <h2>Public shareble link - {{ song.s3_url }}</h2>
+    {% else %}
+        <h2>Please wait for generated public URL</h2>
+    {% endif %}
+
+    <audio controls="controls">
+        <source src="{{ song.url }}"/>
+        Your browser doesnt't support audio , click <a href="{{ song.url }}">here</a> to download
+    </audio>
+</div>
+{% endblock %}

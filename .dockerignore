@@ -1,0 +1,7 @@
+env
+*/*/music*
+__pycache__
+.vscode
+*/music_management.db
+*.env
+*.db
